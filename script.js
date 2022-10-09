@@ -5,11 +5,11 @@ let generateRandom = answers[Math.floor(Math.random()*answers.length)];
 console.log("Word is: " + generateRandom);
 generateRandom = generateRandom.toUpperCase();
 let generateRandomLength = generateRandom.length;
-console.log("length is: " + generateRandomLength)
+console.log("total letters: " + generateRandomLength)
 
 
 for(let i = 0; i < generateRandomLength; i++){
-    document.getElementById("generateRandom").innerHTML =+ "<span class='letters' id='l"+i+"'></span>"
+    document.getElementsByClassName("answerLetters").innerHTML =+ "<span class='letters' id='l"+i+"'></span>"
 }
 
 function checkLetter(letter){
@@ -25,8 +25,6 @@ function checkLetter(letter){
                 }
             }
         }
-    }else{
-        let remLives = parseInt(document.getElementById("lives").innerHTML)
     }
 }
 
