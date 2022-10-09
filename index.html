@@ -16,51 +16,51 @@
         </div>
             
         <div class="question">
+            <p id="question">It is a football team</p>
             <!-- must add the hint and the dotted thing -->
+            <span class="answerLetters" id="0"></span>
         </div>
         <div class="controls">
             <!-- must add the keyboard and reset buttons -->
-            <div class="display"></div>
-            <p class="hintDisplay">Hint is: -</p>
-            <p>Lives left: <span class="lives"></span></p>
+            <div class="display">
+                <p>Lives left: <span id="lives">5</span></p>
             <div class="keyboard">
-                <tr>
-                    <button>Q</button>
-                    <button>W</button>
-                    <button>E</button>
-                    <button>R</button>
-                    <button>T</button>
-                    <button>Y</button>
-                    <button>U</button>
-                    <button>I</button>
-                    <button>O</button>
-                    <button>P</button>
-                </tr>
+                <span id="Q" onclick="checkLetter(this.id)">Q</span>
+                <span id="W" onclick="checkLetter(this.id)">W</span>
+                <span id="E" onclick="checkLetter(this.id)">E</span>
+                <span id="R" onclick="checkLetter(this.id)">R</span>
+                <span id="T" onclick="checkLetter(this.id)">T</span>
+                <span id="Y" onclick="checkLetter(this.id)">Y</span>
+                <span id="U" onclick="checkLetter(this.id)">U</span>
+                <span id="I" onclick="checkLetter(this.id)">I</span>
+                <span id="O" onclick="checkLetter(this.id)">O</span>
+                <span id="P" onclick="checkLetter(this.id)">P</span>
                 <br>
-                <tr>
-                    <button>A</button>
-                    <button>S</button>
-                    <button>D</button>
-                    <button>F</button>
-                    <button>G</button>
-                    <button>H</button>
-                    <button>J</button>
-                    <button>K</button>
-                    <button>L</button>
-                </tr>
+                <span id="A" onclick="checkLetter(this.id)">A</span>
+                <span id="S" onclick="checkLetter(this.id)">S</span>
+                <span id="D" onclick="checkLetter(this.id)">D</span>
+                <span id="F" onclick="checkLetter(this.id)">F</span>
+                <span id="G" onclick="checkLetter(this.id)">G</span>
+                <span id="H" onclick="checkLetter(this.id)">H</span>
+                <span id="J" onclick="checkLetter(this.id)">J</span>
+                <span id="K" onclick="checkLetter(this.id)">K</span>
+                <span id="L" onclick="checkLetter(this.id)">L</span>
                 <br>
-                <tr>
-                    <button>Z</button>
-                    <button>X</button>
-                    <button>C</button>
-                    <button>V</button>
-                    <button>B</button>
-                    <button>N</button>
-                    <button>M</button>
-                </tr>
+                <span id="Z" onclick="checkLetter(this.id)">Z</span>
+                <span id="X" onclick="checkLetter(this.id)">X</span>
+                <span id="C" onclick="checkLetter(this.id)">C</span>
+                <span id="V" onclick="checkLetter(this.id)">V</span>
+                <span id="B" onclick="checkLetter(this.id)">B</span>
+                <span id="N" onclick="checkLetter(this.id)">N</span>
+                <span id="M" onclick="checkLetter(this.id)">M</span>
             </div>
-            <button class="reset">Play Again</button>
-            <button class="hintBtn">Hint</button>
+            <button class="reset" onclick="startGame()">Play Again</button>
+            <div id="winnerMessage" style="display: none;">
+            <span id="win"></span>
+            <button name="Play Again" id="playAgain" onclick="startGame()"></button>
+            </div>
+            <div id="loserMessage" style="display: none;"></div>
+            </div>
         </div>
     </div>
 </body>
