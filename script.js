@@ -1,70 +1,40 @@
 let correctLetterLength = 0;
-const answers = ['arsenal', 'chelsea', 'tottenham', 'liverpool', 'everton']
+const answers = ['arsenal', 'chelsea', 'tottenham', 'liverpool', 'everton', 'wolverhampton', 'ajax', 'bayern']
 
 let generateRandom = answers[Math.floor(Math.random()*answers.length)];
 console.log("Word is: " + generateRandom);
 generateRandom = generateRandom.toUpperCase();
 let generateRandomLength = generateRandom.length;
 console.log("total letters: " + generateRandomLength)
+// console.log(generateRandomLength)
 
-
+let answerLetters = document.getElementsByClassName("answerLetters")[0]
 for(let i = 0; i < generateRandomLength; i++){
-    document.getElementsByClassName("answerLetters").innerHTML =+ "<span class='letters' id='l"+i+"'></span>"
+//    step 1 create a new div
+    let dottedLine = document.createElement("div");
+    // step 2 add class of slot to div
+    dottedLine.classList.add("slot");
+// appendChild the div to the container
+    answerLetters.appendChild(dottedLine);
 }
 
 function checkLetter(letter){
     console.log(letter);
     if(generateRandom.includes(letter)){
-        for(let e = 0; e < generateRandom.length; e++){
-            if(generateRandom[e] == letter){
-                document.getElementById(letter).classList.add('clicked');
-                correctLetterLength = correctLetterLength +1;
-                if(correctLetterLength == generateRandom.length){
-                    document.getElementById("win").innerHTML = generateRandom;
-                    document.getElementById("winnerMessage").style.display="block";
-                }
-            }
-        }
+        console.log('correct guess!')
+        // for(let e = 0; e < generateRandom.length; e++){
+        //     if(generateRandom[e] == letter){
+        //         document.getElementById(letter).classList.add('clicked');
+        //         correctLetterLength = correctLetterLength +1;
+        //         if(correctLetterLength == generateRandom.length){
+        //             document.getElementById("win").innerHTML = generateRandom;
+        //             document.getElementById("winnerMessage").style.display="block";
+        //         }
+        //     }
+        // }
+    } else {
+        console.log('wrong guess!')
     }
 }
 
-// const question = document.querySelector('.question');
-// const display = document.querySelector('.display');
-// const hintDisplay = document.querySelector('.hintDisplay')
-// const lives = document.querySelector('.lives');
-// const keyboard = document.querySelector('.keyboard');
-// const reset = document.querySelector('.reset');
-// const hintBtn = document,querySelector('.hintBtn')
-// const words = [
-//     ['chelsea', 'they wear blue']
-//     ['tottenham', 'they wear white']
-//     ['liverpool', 'they wear red']
-//     ['man city', 'they wear sky blue']
-// ]
-// const letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k'];
-// let remLives;
-
-// function startGame(){
-
-// }
-
-// function letterClick(){
-
-
-// }
-
-// function displayLetter(){
-
-// }
-
-// function hintClick(){
-
-// }
-
-// function resetClick(){
-
-// }
-
-// function win(){
-    
-// }
+// function startGame()
