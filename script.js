@@ -22,7 +22,17 @@ function checkLetter(letter){
     console.log(letter);
     if(generateRandom.includes(letter)){
         console.log('correct guess!')
-        // for(let e = 0; e < generateRandom.length; e++){
+        
+    } else {
+        console.log('wrong guess!')
+    }
+}
+
+// function startGame()
+
+
+
+// for(let e = 0; e < generateRandom.length; e++){
         //     if(generateRandom[e] == letter){
         //         document.getElementById(letter).classList.add('clicked');
         //         correctLetterLength = correctLetterLength +1;
@@ -32,9 +42,3 @@ function checkLetter(letter){
         //         }
         //     }
         // }
-    } else {
-        console.log('wrong guess!')
-    }
-}
-
-// function startGame()
